@@ -10,6 +10,7 @@ import UIKit
 
 open class OnboardingContentViewItem: UIView {
 
+    public var centerYConstraint: NSLayoutConstraint?
     public var descriptionBottomConstraint: NSLayoutConstraint?
     public var titleCenterConstraint: NSLayoutConstraint?
     public var descriptionCenterConstraint: NSLayoutConstraint?
@@ -58,7 +59,7 @@ extension OnboardingContentViewItem {
         }
 
         for attribute in [NSLayoutConstraint.Attribute.centerX, NSLayoutConstraint.Attribute.centerY] {
-            (view, item) >>>- {
+            item.centerYConstraint = (view, item) >>>- {
                 $0.attribute = attribute
                 return
             }

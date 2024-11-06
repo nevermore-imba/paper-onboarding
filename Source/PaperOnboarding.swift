@@ -60,7 +60,8 @@ open class PaperOnboarding: UIView {
     fileprivate var pageViewRadius: CGFloat = 8
 
     fileprivate var fillAnimationView: FillAnimationView?
-    fileprivate var pageView: PageView?
+    fileprivate(set) var pageView: PageView?
+    public var pageControlView: UIView? { pageView }
     public fileprivate(set) var gestureControl: GestureControl?
     fileprivate var contentView: OnboardingContentView?
     
